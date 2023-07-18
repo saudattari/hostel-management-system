@@ -1,5 +1,6 @@
 #include<iostream>
-#include<string.h>
+#include<conio.h>
+#include<string>
 using namespace std;
 
 struct node{
@@ -16,14 +17,27 @@ struct node{
 class Hostel{
     private:
     node* start;
+    string password, user_name;
+    char c;
     public:
     Hostel(){
         start = NULL;
+        password = user_name ="";
+        c = '\0';
+    }
+    void password(){
+        cout<<"Please Enter User Name: ";
+        getline(cin,user_name);
+        if(user_name == "saudattari"){
+            for(int i=0 ;i<8; i++){
+                c = getch();        // to get input
+            }
+        }
     }
 
 };
 
 int main(){
-    
+
 
 }
