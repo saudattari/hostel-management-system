@@ -19,13 +19,11 @@ class Hostel{
     node* start;
     string password, user_name;
     char c;
-    int j;
     public:
     Hostel(){
         start = NULL;
         password = user_name ="";
         c = '\0';
-        j=0;
     }
     void password(){
         cout<<"Please Enter User Name: ";
@@ -34,10 +32,10 @@ class Hostel{
             for(int i=0 ;i<8; i++){
                 if(c == 13){
                     //means it press enter
-                j--;
+                i--;
                 }
                 else if(c == 8){
-                    j--;
+                    i--;
                 }
                 else{
                 c = getch();        // to get input without showing it on screen
