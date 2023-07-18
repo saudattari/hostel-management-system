@@ -25,7 +25,7 @@ class Hostel{
         start = NULL;
         password = user_name ="";
         c = '\0';
-        j=0
+        j=0;
     }
     void password(){
         cout<<"Please Enter User Name: ";
@@ -40,12 +40,11 @@ class Hostel{
                     j--;
                 }
                 else{
-
-                }
                 c = getch();        // to get input without showing it on screen
                 password += c;
                 c = '*';
                 cout<<c;
+                }
             }
         }
     }
