@@ -52,8 +52,6 @@ class Hostel{
 };
 
 int main(){
-    Hostel obj;
-    obj.Password();
-    return 0;
+    
 
 }
