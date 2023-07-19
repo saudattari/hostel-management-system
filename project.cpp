@@ -48,7 +48,14 @@ class Hostel{
             }
         }
     }
-
+    bool login() {
+        if(password == "66666666"){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 };
 
 int main(){
