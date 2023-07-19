@@ -56,6 +56,7 @@ class Hostel{
             return false;
         }
     }
+    
 };
 
 int main(){
