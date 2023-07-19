@@ -17,7 +17,8 @@ struct node{
 class Hostel{
     private:
     node* start;
-    string password, user_name;
+    string password, user_name, s_name, c_name, h_start_date;
+    int h_fee, c_roll;
     char c;
     public:
     Hostel(){
@@ -55,6 +56,19 @@ class Hostel{
         else{
             return false;
         }
+    }
+
+    void Add_info(){
+        cout<<"Enter student name: ";
+        cin>>s_name;
+        cout<<"Enter College Name: ";
+        cin>>c_name;
+        cout<<"Enter hostel addmission date: ";
+        cin>>h_start_date;
+        cout<<"Enter Hostel fee: ";
+        cin>>h_fee;
+        cout<<"Enter college roll No: ";
+        cin>>c_roll;
     }
     
 };
