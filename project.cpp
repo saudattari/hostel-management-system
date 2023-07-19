@@ -25,11 +25,13 @@ class Hostel{
         password = user_name ="";
         c = '\0';
     }
-    void password(){
+    void Password(){
         cout<<"Please Enter User Name: ";
         getline(cin,user_name);
         if(user_name == "saudattari"){
+            cout<<"Enter Password: ";
             for(int i=0 ;i<8; i++){
+                
                 if(c == 13){
                     //means it press enter
                 i--;
@@ -50,6 +52,8 @@ class Hostel{
 };
 
 int main(){
-
+    Hostel obj;
+    obj.Password();
+    return 0;
 
 }
