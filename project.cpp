@@ -17,14 +17,15 @@ struct node{
 class Hostel{
     private:
     node* start;
-    string password, user_name, s_name, c_name, h_start_date;
-    int h_fee, c_roll;
+    string password, user_name, s_name, c_name, h_start_date, c_subject;
+    int h_fee, c_roll,c_semester;
     char c;
     public:
     Hostel(){
         start = NULL;
-        password = user_name ="";
+        password = user_name = s_name = c_name = h_start_date = c_subject ="";
         c = '\0';
+        h_fee = c_roll = c_semester = 0;
     }
     void Password(){
         cout<<"Please Enter User Name: ";
@@ -69,6 +70,10 @@ class Hostel{
         cin>>h_fee;
         cout<<"Enter college roll No: ";
         cin>>c_roll;
+        cout<<"Enter your College semester: ";
+        cin>>c_semester;
+        cout<<"Enter your Subject: ";
+        cin>>c_subject;
     }
     
 };
