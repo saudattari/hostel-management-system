@@ -61,9 +61,9 @@ class Hostel{
 
     void Add_info(){
         cout<<"Enter student name: ";
-        getline(cin, s_name);
+        getline(cin,s_name);
         cout<<"Enter College Name: ";
-        getline(cin, c_name);
+        getline(cin,c_name);
         cout<<"Enter hostel addmission date: ";
         getline(cin,h_start_date);
         cout<<"Enter your Subject: ";
