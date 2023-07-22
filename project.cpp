@@ -61,19 +61,19 @@ class Hostel{
 
     void Add_info(){
         cout<<"Enter student name: ";
-        cin>>s_name;
+        getline(cin, s_name);
         cout<<"Enter College Name: ";
-        cin>>c_name;
+        getline(cin, c_name);
         cout<<"Enter hostel addmission date: ";
-        cin>>h_start_date;
+        getline(cin, h_start_date);
+        cout<<"Enter your Subject: ";
+        getline(cin, c_subject);
         cout<<"Enter Hostel fee: ";
         cin>>h_fee;
         cout<<"Enter college roll No: ";
         cin>>c_roll;
         cout<<"Enter your College semester: ";
         cin>>c_semester;
-        cout<<"Enter your Subject: ";
-        cin>>c_subject;
     }
 
     void linked_list(){
@@ -95,10 +95,41 @@ class Hostel{
             cur->next = p;
         }
     }
+
+    int searching(string name){
+        string x = name;
+        if(start == NULL){
+            return 0;
+        }
+        else{
+            node* cur = start;
+            while(cur != NULL){
+                if(cur->student_name == name){
+                    return 1;
+                }
+                else{
+                    return 0;
+                }
+                cur = cur->next;
+            }
+            return 0;
+        }
+    }
+    
     
 };
 
 int main(){
-    
+    Hostel obj;
+    obj.Add_info();
+    obj.linked_list();
+     int res = obj.searching("saud");
+    if(res == 1){
+        cout<<"Name found";
+    }
+    else{
+        cout<<"Data not present!";
+    }
+    return 0;
 
 }
