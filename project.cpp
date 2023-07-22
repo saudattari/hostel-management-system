@@ -92,6 +92,7 @@ class Hostel{
             while(cur->next != NULL){
                 cur = cur->next;
             }
+            cur->next = p;
         }
     }
     
