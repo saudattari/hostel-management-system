@@ -4,11 +4,11 @@
 using namespace std;
 
 struct node{
-    string student_name, college_name,hostel_starts;
+    string student_name, college_name,hostel_starts,fee_status;
     int hostel_fee, college_roll;
     node* next;
     node(){
-        student_name = college_name = hostel_starts ="";
+        student_name = college_name = hostel_starts = fee_status ="";
         hostel_fee = college_roll = 0;
         next =  NULL;
     }
@@ -17,13 +17,13 @@ struct node{
 class Hostel{
     private:
     node* start;
-    string password, user_name, s_name, c_name, h_start_date, c_subject;
+    string password, user_name, s_name, c_name, h_start_date, c_subject, f_status;
     int h_fee, c_roll,c_semester;
     char c;
     public:
     Hostel(){
         start = NULL;
-        password = user_name = s_name = c_name = h_start_date = c_subject ="";
+        password = user_name = s_name = c_name = h_start_date = c_subject = f_status ="";
         c = '\0';
         h_fee = c_roll = c_semester = 0;
     }
@@ -61,19 +61,21 @@ class Hostel{
 
     void Add_info(){
         cout<<"Enter student name: ";
-        cin>>s_name;
+        getline(cin,s_name);
         cout<<"Enter College Name: ";
-        cin>>c_name;
+        getline(cin,c_name);
         cout<<"Enter hostel addmission date: ";
-        cin>>h_start_date;
+        getline(cin,h_start_date);
+        cout<<"Enter your Subject: ";
+        getline(cin,c_subject);
+        cout<<"Enter fee status: ";
+        getline(cin, f_status);
         cout<<"Enter Hostel fee: ";
         cin>>h_fee;
         cout<<"Enter college roll No: ";
         cin>>c_roll;
         cout<<"Enter your College semester: ";
         cin>>c_semester;
-        cout<<"Enter your Subject: ";
-        cin>>c_subject;
     }
     
 };
