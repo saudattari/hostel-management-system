@@ -75,6 +75,25 @@ class Hostel{
         cout<<"Enter your Subject: ";
         cin>>c_subject;
     }
+
+    void linked_list(){
+        node* p = new node();
+        p->student_name = s_name;
+        p->college_name = c_name;
+        p->college_roll = c_roll;
+        p->hostel_fee = h_fee;
+        p->hostel_starts = h_start_date;
+        p->next = NULL;
+        if(start == NULL){
+            start = p;
+        }
+        else{
+            node* cur = start;
+            while(cur->next != NULL){
+                cur = cur->next;
+            }
+        }
+    }
     
 };
 
